@@ -14,3 +14,6 @@ Or you can copy or move these folder to htdocs (on windows) or /var/www/html (on
 browser to this address
 
 	localhost/[your folder name]/public
+
+
+based on : https://www.petanikode.com/slim-api/ (with modification in middleware)
