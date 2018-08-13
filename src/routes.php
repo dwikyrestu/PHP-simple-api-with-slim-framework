@@ -69,7 +69,7 @@ $app->get("/books/search/", function (Request $request, Response $response, $arg
     $stmt->execute([":id" => $id]);
     $result = $stmt->fetchAll();
     return $response->withJson(["status" => "success", "data" => $result], 200);
-});
+})->add($mw);
 
 $app->post("/books/", function (Request $request, Response $response){
 
@@ -88,7 +88,7 @@ $app->post("/books/", function (Request $request, Response $response){
        return $response->withJson(["status" => "success", "data" => "1"], 200);
     
     return $response->withJson(["status" => "failed", "data" => "0"], 200);
-});
+})->add($mw);
 
 
 $app->put("/books/{id}", function (Request $request, Response $response, $args){
@@ -124,4 +124,4 @@ $app->delete("/books/{id}", function (Request $request, Response $response, $arg
        return $response->withJson(["status" => "success", "data" => "1"], 200);
     
     return $response->withJson(["status" => "failed", "data" => "0"], 200);
-});
+})->add($mw);
