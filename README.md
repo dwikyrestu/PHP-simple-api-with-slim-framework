@@ -17,3 +17,5 @@ browser to this address
 
 
 based on : https://www.petanikode.com/slim-api/ (with modification in middleware)
+
+Noted : You must run composer update to generate vendor folder
